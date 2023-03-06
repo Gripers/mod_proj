@@ -1,0 +1,65 @@
+.profile__addresses {
+  .content {
+    height: 100%;
+
+    .ex {
+      .addresses__wrapper {
+        display: grid;
+        gap: 10px;
+        margin: 10px 0 20px 0;
+
+        .address__item {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          border-bottom: 1px solid #efefef;
+          padding-bottom: 20px;
+
+          p {
+            color: #666666;
+          }
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          & > div {
+            display: flex;
+            gap: 20px;
+
+            p {
+              font-size: 14px;
+              background-color: #efefef;
+              padding: 5px 10px;
+            }
+
+            button {
+              border: none;
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+
+    .nothing {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+
+      img {
+        height: 60px;
+        object-fit: contain;
+      }
+    }
+
+    .add__btn {
+      background-color: #222222;
+      color: white;
+      padding: 10px 20px;
+    }
+  }
+}

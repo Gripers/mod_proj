@@ -1,0 +1,54 @@
+.profile__cards {
+  .content {
+    height: 100%;
+
+    .ex {
+      .cards__wrapper {
+        width: fit-content;
+        display: grid;
+        gap: 10px;
+        background-color: #efefef;
+        margin: 10px 0 20px 0;
+        padding: 10px 20px;
+
+        .card__item {
+          max-width: 300px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 20px;
+
+          button {
+            border: none;
+            background-color: transparent;
+
+            img {
+              height: 20px;
+              object-fit: contain;
+            }
+          }
+        }
+      }
+    }
+
+    .nothing {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+
+      img {
+        height: 60px;
+        object-fit: contain;
+      }
+    }
+
+    .add_card__btn {
+      background-color: #222222;
+      color: white;
+      padding: 10px 20px;
+    }
+  }
+}

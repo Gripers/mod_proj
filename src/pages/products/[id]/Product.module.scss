@@ -1,0 +1,120 @@
+.product {
+  .top__wrapper {
+    display: flex;
+    gap: 20px;
+
+    .left {
+      width: 100%;
+      max-height: 500px;
+      display: flex;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .right {
+      width: 100%;
+
+      .top {
+        display: grid;
+        gap: 10px;
+
+        .sizes,
+        .color {
+          .wrapper {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+
+            button {
+              width: 100%;
+              max-width: 55px;
+              border: none;
+              border-radius: 4px;
+              background-color: #f5f5f5;
+              padding: 10px;
+
+              &:first-child {
+                background-color: transparent;
+              }
+            }
+
+            input[type='radio'] {
+              appearance: none;
+              width: 22px;
+              height: 22px;
+              cursor: pointer;
+              border: 1px solid black;
+              border-radius: 50%;
+              background-clip: content-box;
+            }
+
+            input[type='radio']:checked {
+              border: 2px solid black;
+              padding: 3px;
+            }
+          }
+        }
+
+        .cart__btn {
+          background-color: #222222;
+          color: white;
+          margin-top: 10px;
+          padding: 10px 20px;
+        }
+      }
+
+      .bottom {
+        .order {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 20px;
+
+          & > div p:first-child {
+            opacity: 0.5;
+          }
+        }
+
+        .data__wrapper {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
+
+          & > div p:first-child {
+            opacity: 0.5;
+          }
+        }
+
+        .questions {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 20px;
+          background-color: #f5f5f5;
+          margin-top: 10px;
+          padding: 20px;
+
+          button {
+            border: 2px solid black;
+            border-radius: 4px;
+            background-color: transparent;
+            padding: 10px 20px;
+          }
+        }
+      }
+    }
+  }
+
+  hr {
+    margin: 20px 0;
+  }
+}
+
+@media all and (max-width: 800px) {
+  .product .top__wrapper {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,44 @@
+.filter {
+  margin: 26px 0;
+
+  .top {
+    display: flex;
+    gap: 20px;
+
+    .selector {
+      width: 100%;
+    }
+
+    button {
+      border: 1px solid hsl(0, 0%, 80%);
+      border-radius: 4px;
+      background-color: white;
+      transition: all 0.2s;
+      font-size: 16px;
+      padding: 8px 20px;
+
+      &:hover {
+        background-color: #f0f0f0;
+      }
+    }
+  }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+
+    .minbox {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+}
+
+@media all and (max-width: 700px) {
+  .filter .bottom {
+    display: none;
+  }
+}

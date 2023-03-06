@@ -1,0 +1,128 @@
+.cart {
+  .content {
+    margin-top: 16px;
+
+    .empty {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      margin: 56px auto;
+
+      .btns {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        button {
+          padding: 8px 20px;
+
+          &:first-child {
+            background-color: transparent;
+          }
+
+          &:last-child {
+            background-color: #000000;
+            color: white;
+          }
+        }
+      }
+    }
+
+    .filled {
+      display: flex;
+      gap: 40px;
+      margin: 26px 0;
+
+      .left {
+        width: 100%;
+        display: grid;
+        gap: 20px;
+
+        .card {
+          display: flex;
+          gap: 20px;
+          border-bottom: 1px solid #eeeef0;
+          padding-bottom: 20px;
+
+          .head {
+            max-width: 98px;
+            max-height: 135px;
+            display: flex;
+          }
+
+          .content {
+            width: 100%;
+            display: grid;
+
+            .delete__btn {
+              border: none;
+              background-color: transparent;
+
+              img {
+                height: 24px;
+                object-fit: contain;
+              }
+            }
+
+            .flex {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+
+              .counter {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                button {
+                  width: 24px;
+                  height: 24px;
+                  background-color: black;
+                  color: white;
+                }
+              }
+            }
+          }
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+
+      .right {
+        width: 50%;
+        height: fit-content;
+        background-color: #f8f8f8;
+        text-align: center;
+        display: grid;
+        gap: 10px;
+        padding: 20px;
+
+        a {
+          background-color: black;
+          color: white;
+          text-decoration: none;
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 700px) {
+  .cart .content .filled {
+    flex-direction: column;
+
+    h2 {
+      font-size: 18px;
+    }
+
+    .right {
+      width: 100%;
+    }
+  }
+}

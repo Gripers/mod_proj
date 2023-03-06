@@ -1,0 +1,26 @@
+.card__category {
+  .head {
+    max-height: 300px;
+    display: flex;
+  }
+
+  .body {
+    text-align: center;
+    padding-top: 20px;
+  }
+}
+
+.card__cloth {
+  .head {
+    max-height: 300px;
+    display: flex;
+  }
+
+  .body {
+    padding-top: 20px;
+
+    * {
+      margin-top: 10px;
+    }
+  }
+}

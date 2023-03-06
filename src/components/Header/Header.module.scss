@@ -1,0 +1,22 @@
+.header {
+  max-height: 300px;
+  position: relative;
+  background-image: url(../../assets/media/header.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-end;
+  padding: 15%;
+
+  .card {
+    height: fit-content;
+    background-color: white;
+    text-align: end;
+    padding: 20px;
+
+    a {
+      color: black;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.otp {
+  form {
+    width: fit-content;
+    display: grid;
+    text-align: center;
+    margin: 26px auto;
+
+    .otp__input {
+      justify-content: center;
+      gap: 10px;
+      margin: 16px 0;
+
+      & > div > input {
+        width: 30px !important;
+        height: 40px;
+        border: 2px solid black;
+        outline: none;
+        font-size: 20px;
+      }
+    }
+
+    button {
+      background-color: #222222;
+      color: white;
+      padding: 10px 20px;
+    }
+  }
+
+  button {
+    width: 100%;
+    border: 2px solid black;
+    background-color: transparent;
+    padding: 10px 20px;
+  }
+}

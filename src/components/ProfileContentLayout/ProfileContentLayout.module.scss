@@ -1,0 +1,30 @@
+.profile_content__layout {
+  .content {
+    margin-top: 10px;
+
+    .wrapper {
+      display: flex;
+      gap: 40px;
+      margin-top: 10px;
+
+      .left {
+        width: 30%;
+      }
+
+      .right {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 700px) {
+  .profile_content__layout .content .wrapper {
+    flex-direction: column;
+
+    .left,
+    .right {
+      width: 100%;
+    }
+  }
+}

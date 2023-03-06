@@ -1,0 +1,25 @@
+.login {
+  .content {
+    margin-top: 16px;
+
+    .card {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+      background-color: #efefef;
+      margin: 26px auto;
+      padding: 20px;
+
+      button {
+        width: 100%;
+        background-color: #222222;
+        color: white;
+        padding: 10px 20px;
+      }
+    }
+  }
+}
