@@ -25,50 +25,48 @@ const Addresses = () => {
     },
   ]);
 
-    useEffect(() => {
-      setAddresses([]);
-    }, []);
+  useEffect(() => {
+    setAddresses([]);
+  }, []);
 
   return (
     <div id='container' className={styles.profile__addresses}>
-      <ProfileContentLayout
-        children={
-          <div className={styles.content}>
-            {addresses?.length ? (
-              <div className={styles.ex}>
-                <h2>МОИ АДРЕСА</h2>
-                <div className={styles.addresses__wrapper}>
-                  {addresses?.map((address) => (
-                    <div key={address?.id} className={styles.address__item}>
-                      <p>
-                        {address?.user} - +{address?.phone}
+      <ProfileContentLayout>
+        <div className={styles.content}>
+          {addresses?.length ? (
+            <div className={styles.ex}>
+              <h2>МОИ АДРЕСА</h2>
+              <div className={styles.addresses__wrapper}>
+                {addresses?.map((address) => (
+                  <div key={address?.id} className={styles.address__item}>
+                    <p>
+                      {address?.user} - +{address?.phone}
+                    </p>
+                    <b>{address?.address}</b>
+                    <div>
+                      <p
+                        style={{
+                          display: address?.default ? 'block' : 'none',
+                        }}
+                      >
+                        ПО УМОЛЧАНИЮ
                       </p>
-                      <b>{address?.address}</b>
-                      <div>
-                        <p
-                          style={{
-                            display: address?.default ? 'block' : 'none',
-                          }}
-                        >
-                          ПО УМОЛЧАНИЮ
-                        </p>
-                        <button>РЕДАКТИРОВАТЬ</button>
-                      </div>
+                      <button>РЕДАКТИРОВАТЬ</button>
                     </div>
-                  ))}
-                </div>
-                <button className={styles.add__btn}>ДОБАВИТЬ АДРЕС</button>
+                  </div>
+                ))}
               </div>
-            ) : (
-              <div className={styles.nothing}>
-                <Image src={address_ico} alt='' />
-                <h2>У ВАС НЕТ АДРЕСОВ</h2>
-                <button className={styles.add__btn}>ДОБАВИТЬ АДРЕС</button>
-              </div>
-            )}
-          </div>
-        }
-      />
+              <button className={styles.add__btn}>ДОБАВИТЬ АДРЕС</button>
+            </div>
+          ) : (
+            <div className={styles.nothing}>
+              <Image src={address_ico} alt='' />
+              <h2>У ВАС НЕТ АДРЕСОВ</h2>
+              <button className={styles.add__btn}>ДОБАВИТЬ АДРЕС</button>
+            </div>
+          )}
+        </div>
+      </ProfileContentLayout>
     </div>
   );
 };

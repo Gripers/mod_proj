@@ -36,39 +36,37 @@ const Cards = () => {
 
   return (
     <div id='container' className={styles.profile__cards}>
-      <ProfileContentLayout
-        children={
-          <div className={styles.content}>
-            {cards?.length ? (
-              <div className={styles.ex}>
-                <h2>МОИ КАРТЫ</h2>
-                <div className={styles.cards__wrapper}>
-                  {cards?.map((card) => (
-                    <div key={card?.id} className={styles.card__item}>
-                      <h3>
-                        {card?.card_num
-                          ?.toString()
-                          ?.replace(/\B(?=(\d{4})+(?!\d))/g, ' ')}
-                      </h3>
-                      <button>
-                        <Image src={rubbish_ico} alt='' />
-                      </button>
-                    </div>
-                  ))}
-                </div>
-                <button className={styles.add_card__btn}>ДОБАВИТЬ КАРТУ</button>
+      <ProfileContentLayout>
+        <div className={styles.content}>
+          {cards?.length ? (
+            <div className={styles.ex}>
+              <h2>МОИ КАРТЫ</h2>
+              <div className={styles.cards__wrapper}>
+                {cards?.map((card) => (
+                  <div key={card?.id} className={styles.card__item}>
+                    <h3>
+                      {card?.card_num
+                        ?.toString()
+                        ?.replace(/\B(?=(\d{4})+(?!\d))/g, ' ')}
+                    </h3>
+                    <button>
+                      <Image src={rubbish_ico} alt='' />
+                    </button>
+                  </div>
+                ))}
               </div>
-            ) : (
-              <div className={styles.nothing}>
-                <Image src={cards_ico} alt='' />
-                <h2>У ВАС НЕ КАРТ</h2>
-                <p>Чтобы быстро оформлять заказы нужно добавить карту</p>
-                <button className={styles.add_card__btn}>ДОБАВИТЬ КАРТУ</button>
-              </div>
-            )}
-          </div>
-        }
-      />
+              <button className={styles.add_card__btn}>ДОБАВИТЬ КАРТУ</button>
+            </div>
+          ) : (
+            <div className={styles.nothing}>
+              <Image src={cards_ico} alt='' />
+              <h2>У ВАС НЕ КАРТ</h2>
+              <p>Чтобы быстро оформлять заказы нужно добавить карту</p>
+              <button className={styles.add_card__btn}>ДОБАВИТЬ КАРТУ</button>
+            </div>
+          )}
+        </div>
+      </ProfileContentLayout>
     </div>
   );
 };

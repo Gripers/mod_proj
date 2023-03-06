@@ -140,31 +140,28 @@ const Navbar = () => {
         </div>
       </div>
 
-      <DrawerComponent
-        children={
-          <div className={styles.drawer__content}>
-            <div className={styles.head}>
-              <button onClick={closeDrawer}>
-                <Image src={close_ico} alt='' />
-              </button>
+      <DrawerComponent isOpened={isMobileDrawerOpened}>
+        <div className={styles.drawer__content}>
+          <div className={styles.head}>
+            <button onClick={closeDrawer}>
+              <Image src={close_ico} alt='' />
+            </button>
+          </div>
+          <div className={styles.body}>
+            <div className={styles.top}>
+              <Link href='/login'>ВХОД</Link>
+              <Link href='/login'>РЕГИСТРАЦИЯ</Link>
             </div>
-            <div className={styles.body}>
-              <div className={styles.top}>
-                <Link href='/login'>ВХОД</Link>
-                <Link href='/login'>РЕГИСТРАЦИЯ</Link>
-              </div>
-              <div className={styles.middle}></div>
-              <div className={styles.bottom}>
-                <ul>
-                  <li>РУССКИЙ</li>
-                  <li>УЗБЕКСКИЙ</li>
-                </ul>
-              </div>
+            <div className={styles.middle}></div>
+            <div className={styles.bottom}>
+              <ul>
+                <li>РУССКИЙ</li>
+                <li>УЗБЕКСКИЙ</li>
+              </ul>
             </div>
           </div>
-        }
-        isOpened={isMobileDrawerOpened}
-      />
+        </div>
+      </DrawerComponent>
     </>
   );
 };

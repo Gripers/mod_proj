@@ -6,13 +6,15 @@ import ProfileContentLayout from '@/components/ProfileContentLayout/ProfileConte
 const Orders = () => {
   const [orders, setOrders] = useState();
 
-//   useEffect(() => {
-//     setOrders([]);
-//   }, []);
+  //   useEffect(() => {
+  //     setOrders([]);
+  //   }, []);
 
   return (
     <div id='container' className={styles.profile__orders}>
-      <ProfileContentLayout children={<div className={styles.content}></div>} />
+      <ProfileContentLayout>
+        <div className={styles.content}></div>
+      </ProfileContentLayout>
     </div>
   );
 };

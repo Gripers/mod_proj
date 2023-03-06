@@ -32,7 +32,7 @@ const CountDown = ({ hours = 0, minutes = 0, seconds = 0 }) => {
   React.useEffect(() => {
     const timerID = setInterval(() => tick(), 1000);
     return () => clearInterval(timerID);
-  }, []);
+  }, [tick]);
 
   return (
     <p>{`${h.toString().padStart(2, "0")}:${m.toString().padStart(2, "0")}:${s
